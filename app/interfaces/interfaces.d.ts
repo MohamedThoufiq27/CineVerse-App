@@ -1,10 +1,25 @@
+interface images{
+  poster:string[];
+  fanart:string[];
+}
+
+interface ids{
+  imdb:string;
+  slug:string;
+}
+
 interface Movie {
-  id: number;
+  ids: ids;
   title: string;
   adult: boolean;
+  images : images;
+  imdb:string;
+  poster : string[];
   backdrop_path: string;
   genre_ids: number[];
-  original_language: string;
+  year:number;
+  language: string;
+  rating:number ;
   original_title: string;
   overview: string;
   popularity: number;
@@ -16,59 +31,44 @@ interface Movie {
 }
 
 interface TrendingMovie {
-  searchTerm: string;
-  movie_id: number;
+  query: string;
+  movie_slug: number;
   title: string;
   count: number;
   poster_url: string;
 }
 
-interface MovieDetails {
-  adult: boolean;
-  backdrop_path: string | null;
-  belongs_to_collection: {
-    id: number;
-    name: string;
-    poster_path: string;
-    backdrop_path: string;
-  } | null;
-  budget: number;
-  genres: {
-    id: number;
-    name: string;
-  }[];
-  homepage: string | null;
-  id: number;
-  imdb_id: string | null;
-  original_language: string;
-  original_title: string;
-  overview: string | null;
-  popularity: number;
-  poster_path: string | null;
-  production_companies: {
-    id: number;
-    logo_path: string | null;
-    name: string;
-    origin_country: string;
-  }[];
-  production_countries: {
-    iso_3166_1: string;
-    name: string;
-  }[];
-  release_date: string;
-  revenue: number;
-  runtime: number | null;
-  spoken_languages: {
-    english_name: string;
-    iso_639_1: string;
-    name: string;
-  }[];
-  status: string;
-  tagline: string | null;
-  title: string;
-  video: boolean;
-  vote_average: number;
-  vote_count: number;
+interface MovieDetail {
+  Title: string;
+  Year: string;
+  Rated: string;
+  Released: string;
+  Runtime: string;
+  Genre: string;
+  Director: string;
+  Writer: string;
+  Actors: string;
+  Plot: string;
+  Language: string;
+  Country: string;
+  Awards: string;
+  Poster: string;
+  Ratings: Rating[];
+  Metascore: string;
+  imdbRating: string;
+  imdbVotes: string;
+  imdbID: string;
+  Type: string;
+  DVD: string;
+  BoxOffice: string;
+  Production: string;
+  Website: string;
+  Response: string;
+}
+
+interface Rating {
+  Source: string;
+  Value: string;
 }
 
 interface TrendingCardProps {

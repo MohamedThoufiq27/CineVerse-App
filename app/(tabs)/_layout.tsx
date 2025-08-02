@@ -1,9 +1,9 @@
 
-import React from 'react'
 import { Tabs } from 'expo-router'
+import React from 'react'
 import { Image, ImageBackground, Text, View } from 'react-native'
-import { images } from '../constants/images'
 import { icons } from '../constants/icons'
+import { images } from '../constants/images'
 
 const TabIcon = ({focused,icon,text}:any) => {
     if(focused){
@@ -74,6 +74,17 @@ const _layout = () => {
         />
 
         <Tabs.Screen 
+            name='Search'
+            options={{
+                title:"Search",
+                headerShown:false,
+                tabBarIcon:({focused})=>(
+                    <TabIcon focused={focused} icon={icons.search} text="Search" />
+                )
+            }}
+        />
+
+        <Tabs.Screen 
             name='saved'
             options={{
                 title:"Saved",
@@ -84,16 +95,7 @@ const _layout = () => {
             }}
         />
 
-        <Tabs.Screen 
-            name='search'
-            options={{
-                title:"Search",
-                headerShown:false,
-                tabBarIcon:({focused})=>(
-                    <TabIcon focused={focused} icon={icons.search} text="Search" />
-                )
-            }}
-        />
+        
 
         <Tabs.Screen 
             name='profile'
