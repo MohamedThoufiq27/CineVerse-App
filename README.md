@@ -1,50 +1,81 @@
-# Welcome to your Expo app 👋
+# 🎬 CineVerse - Mobile Movie Discovery App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+**CineVerse** is a sleek and dynamic mobile application for discovering movies. Search for any film, browse real-time trending lists from Trakt.tv, and see what's popular among the app's users. Built with **React Native**, it features a modern, mobile-first interface and an efficient search experience designed for both iOS and Android.
 
-## Get started
+---
 
-1. Install dependencies
+## 📱 Screenshots
 
-   ```bash
-   npm install
-   ```
+| Home Screen | Movie Details |
+| :---------: | :-----------: |
+| ![Home Screen](./screenshots/home.png) | ![Movie Details](./screenshots/details.png) |
 
-2. Start the app
+> _Note: Replace the image paths with actual screenshots from your app._
 
-   ```bash
-   npx expo start
-   ```
+---
 
-In the output, you'll find options to open the app in a
+## ✨ Features
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+- **Dynamic Header**  
+  Engaging typing animation in the hero section of the home screen.
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+- **Real-time Movie Search**  
+  Instantly search any movie using the Trakt.tv API.
 
-## Get a fresh project
+- **Optimized API Requests**  
+  Debounced search functionality to reduce API load and enhance performance.
 
-When you're ready, run:
+- **Trending from Trakt.tv**  
+  Default movie list shows current trending movies from Trakt.tv.
+
+- **Community-Driven Trends**  
+  Uses Appwrite backend to track and display the most searched movies by users.
+
+- **Clean, Native UI**  
+  Intuitive and responsive interface designed for mobile.
+
+- **Native Navigation**  
+  Navigate smoothly between movie cards and details using React Navigation.
+
+---
+
+## 🛠️ Tech Stack
+
+### 📱 Mobile Frontend
+- **React Native** – For cross-platform app development
+- **React Navigation** – Screen navigation and routing
+- **Axios** – API requests
+- **Custom Debounce Hook** – Prevents excessive API calls
+
+### 🗄️ Backend & Database
+- **Appwrite** – Backend server to track user searches
+
+### 🌐 APIs
+- **Trakt.tv API** – Main movie data and trending lists
+- **OMDb API** – Supplementary movie information
+
+### 🎨 Styling
+- **React Native StyleSheet** – Platform-agnostic styling
+
+---
+
+## 🚀 Getting Started
+
+### ✅ Prerequisites
+
+Ensure the following are installed:
+
+- Node.js (v16+)
+- npm or yarn
+- React Native development environment  
+  [Official Setup Guide](https://reactnative.dev/docs/environment-setup)
+
+---
+
+### 📦 Installation
+
+Clone the repository:
 
 ```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+git clone https://github.com/your-username/your-repo-name.git
+cd your-repo-name
